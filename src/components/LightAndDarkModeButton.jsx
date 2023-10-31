@@ -1,6 +1,22 @@
-import React from 'react'
+
+import React, { useState } from 'react'
+
 
 const LightAndDarkModeButton = () => {
+    const [mode, setMode] = useState('light');
+
+    const toggleMode = () => {
+        if (mode == 'light') {
+            setMode('dark');
+            document.body.style.backgroundColor = '#111120';
+        }
+        else {
+            setMode('light')
+            document.body.style.backgroundColor = 'white'
+
+        }
+    }
+
     return (
         <div>
 
@@ -8,7 +24,9 @@ const LightAndDarkModeButton = () => {
 
             <div className='flex justify-center items-center h-screen'>
 
-                <button className='bg-gray-300 rounded-full p-2'>
+                <button
+                    onClick={toggleMode}
+                    className='bg-gray-300 rounded-full p-2'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"

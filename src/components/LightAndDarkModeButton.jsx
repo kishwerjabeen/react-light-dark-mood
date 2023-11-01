@@ -22,6 +22,8 @@ const LightAndDarkModeButton = () => {
 
             <h1 className={` ${mode === 'dark' ? 'text-white' : 'text-black '} text-center my-10 text-xl font-bold `} >This is Dark And Light Mode Button </h1>
 
+            <h1 className={` ${mode === 'dark' ? 'text-white' : 'text-black '} text-center my-10 text-4xl font-bold `} >Kishwar J. </h1>
+
             <div className='flex justify-center items-center h-screen'>
 
                 {mode === 'light'
